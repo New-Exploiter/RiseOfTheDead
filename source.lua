@@ -59,14 +59,17 @@ function unfreeze()
 end
 
 function heal()
+local bool = 0
+local bool1 = 0
     if game.GameId == 65708455 then
         _G.heal = true
         wait()
+if bool == 0 then
+local place = speaker.Character.HumanoidRootPart.CFrame
         while _G.heal == true do
             wait ()
        if game:GetService("Workspace").Entity.Carlos:WaitForChild("HumanoidRootPart", math.huge) ~= nil then
         if speaker.Character.Humanoid.Health < 50 then
-            local place = speaker.Character.HumanoidRootPart.CFrame
         speaker.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Entity.Carlos.HumanoidRootPart.CFrame + Vector3.new(3,0,0)
         else
             wait()
@@ -81,7 +84,7 @@ function heal()
 end
 
 function box()
-_G.hitboxb = 30,30
+_G.hitboxb = 100
 _G.box = true
 while _G.box == true do
     wait()
