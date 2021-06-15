@@ -8,7 +8,7 @@ function hitbox()
         wait()
     for i,v in pairs(game:GetService("Workspace").Entity:GetChildren()) do
         if v:FindFirstChild("Zombie") ~= nil then
-            if v:WaitForChild("Head", math.huge) ~= nil then
+            if v:WaitForChild("Head", 1) ~= nil then
                 v.Head.Size = Vector3.new(6,6,6)
                 v.Head.CanCollide = false
                 end
@@ -81,13 +81,13 @@ function heal()
 end
 
 function box()
-_G.hitboxb = 30,30
+_G.hitboxb = 65
 _G.box = true
 while _G.box == true do
     wait()
     for i,v in pairs(game:GetService("Workspace").Entity:GetChildren()) do
         if v:FindFirstChild("Zombie") ~= nil then
-            if v:WaitForChild("HumanoidRootPart", math.huge) ~= nil then
+            if v:WaitForChild("HumanoidRootPart", 1) ~= nil then
                 v.HumanoidRootPart.Size = Vector3.new(_G.hitboxb, _G.hitboxb, _G.hitboxb)
                 v.HumanoidRootPart.Transparency = 1
                 v.HumanoidRootPart.CanCollide = false
