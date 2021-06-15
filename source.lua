@@ -132,12 +132,6 @@ end)
 local Tab1 = Window:NewTab("Player")
 local Section1 = Tab1:NewSection("PLAYER")
 
-Section1:NewTextBox("TextboxText", "TextboxInfo", function(txt)
-    game:GetService("RunService").Stepped:Connect(function()
-        speaker.Character.Humanoid.WalkSpeed = s
-    end)
-end)
-
 Section1:NewSlider("HipHeight", "Slide to Adjust", 24, 1.4, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
 end)
