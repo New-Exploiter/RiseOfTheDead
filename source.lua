@@ -148,4 +148,9 @@ Section2:NewToggle("Heal When Low HP", "Only Works For SafeHouse At The Moment",
     end
 end)
 
+local Tab3 = Window:NewTab("Travels")
+local Section3 = Tab3:NewSection("Teleports")
 
+Section3:NewButton("WareHouse Travel <-", "Travel to the Warehouse free of cost", function()
+    game:GetService("TeleportService"):Teleport(464575687)
+end)
